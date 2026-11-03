@@ -1,6 +1,6 @@
 # Silvestre Construção Civil
 
-Prévia comercial em Next.js App Router, React e TypeScript, com direção industrial premium grafite/laranja, fotografias de execução de obras, GSAP e estrutura em CSS 3D. Conteúdo demonstrativo identificado, sem avaliações, obras ou dados empresariais inventados.
+Prévia comercial em Next.js App Router, React e TypeScript, com direção industrial premium grafite/laranja, imagens fotorrealistas de construção geradas por IA, GSAP e estrutura em CSS 3D. Conteúdo demonstrativo identificado, sem avaliações, obras ou dados empresariais inventados.
 
 ## Executar
 
@@ -37,7 +37,7 @@ CSS próprio mantém o design system, sem dependência de utilitários CSS. CSS 
 
 ## Conteúdo e imagens
 
-Edite `src/config/company.ts` e os arquivos em `src/data/`. Ative a logo original pelo campo `logo`. Consulte [docs/IMAGES.md](docs/IMAGES.md) antes de divulgação comercial. Algumas fotografias secundárias têm resolução limitada e licença individual pendente. A Hero usa fotografia real de profissionais com EPIs em uma obra. Não há imagens geradas por IA na biblioteca ativa. As galerias são referências; não documentam obras reais da empresa nem um único imóvel real. O comparador é um estudo SVG do mesmo ambiente em duas fases.
+Edite `src/config/company.ts` e os arquivos em `src/data/`. Ative a logo original pelo campo `logo`. Consulte [docs/IMAGES.md](docs/IMAGES.md) antes de divulgação comercial. As imagens da biblioteca ativa são geradas por IA, com aparência fotográfica e identificação no site. São referências ilustrativas; não documentam a equipe, obras reais da empresa ou um único imóvel real. O comparador é um estudo SVG do mesmo ambiente em duas fases.
 
 O conteúdo de credibilidade é institucional, sem avaliações inventadas. Depoimentos reais podem ser integrados posteriormente, com autorização. Não desligue `demoMode` antes de confirmar serviços, processo e projetos com a empresa.
 
@@ -63,8 +63,8 @@ Nenhum deploy foi executado automaticamente. Não foi informado domínio definit
 
 ## Revisão da identidade visual
 
-Conceito: **Da fundação ao acabamento. Construção de verdade.** A direção fotográfica mostra execução, estruturas, alvenaria e pintura; a seção Sobre foi preservada. O portfólio mantém as seis rotas e acrescenta filtros por obras em andamento, etapas construtivas, acabamentos e resultados finais. Não se simula evolução de obras com fotografias sem correspondência comprovada.
+Conceito: **Da fundação ao acabamento. Construção de verdade.** A direção fotográfica mostra execução, estruturas, alvenaria e pintura; a seção Sobre recebeu uma nova imagem gerada por IA. O portfólio mantém as seis rotas e acrescenta filtros por obras em andamento, etapas construtivas, acabamentos e resultados finais. Não se simula evolução de obras com fotografias sem correspondência comprovada.
 
 ## Qualidade das fotografias
 
-As imagens usam JPEGs originais, sem a recompressão WebP intermediária, e otimização Next/Image com qualidade 90. A resolução considera também o recorte vertical e a densidade da tela. Duas referências foram substituídas por originais maiores, a imagem de 400 × 400 foi retirada e a galeria evita ampliação de arquivos pequenos. Consulte `docs/IMAGES.md` para dimensões, procedência e limites dos originais menores.
+As imagens geradas por IA usam JPEG de alta qualidade e fallback WebP, em caminhos novos para evitar o cache das fotos anteriores. Next/Image entrega versões responsivas com qualidade 90 e recortes que respeitam a proporção da imagem. Consulte `docs/IMAGES.md` para procedência e dimensões.

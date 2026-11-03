@@ -51,7 +51,7 @@ export default function Photo({
     >
       <Image
         src={fallback ? asset.fallbackPath : asset.path}
-        alt={alt}
+        alt={asset.alt || alt}
         fill
         sizes={`${displayWidth ?? asset.width}px`}
         priority={priority}

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "Construímos mais que obras. Construímos confiança.",
     locale: "pt_BR",
     type: "website",
-    images: ["/images/work-hero.jpg"],
+    images: ["/images/ai/work-hero-original.jpg"],
   },
   robots: company.demoMode
     ? { index: false, follow: false }

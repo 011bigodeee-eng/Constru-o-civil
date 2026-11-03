@@ -1,29 +1,19 @@
-# Direção fotográfica — construção de verdade
+# Imagens de construção civil geradas por IA
 
-A revisão substitui a direção de arquitetura de luxo por execução de obras. O manifesto `src/data/images.ts` contém 17 fotografias de referência, com origem fixada no commit, dimensões originais e otimizadas, seção, texto alternativo e ponto focal desktop/mobile. Não há imagens geradas por IA na biblioteca ativa.
+A biblioteca ativa foi substituída por 17 imagens fotorrealistas geradas com OpenAI em 3 de novembro de 2026, a pedido do responsável pelo site. São cenas ilustrativas de construção civil brasileira: equipe com EPIs, planejamento, estrutura de concreto, alvenaria, reformas, revestimentos, preparação do terreno e residências finalizadas.
 
-## Seleção e enquadramento
+As imagens não documentam funcionários, clientes ou obras executadas pela Silvestre. A capa, o portfólio, as páginas de projetos e o rodapé identificam a geração por IA. As galerias não devem ser apresentadas como registros da evolução de um mesmo imóvel.
 
-- Hero: profissionais com capacetes e coletes diante de estrutura de concreto em execução; imagem original 2000 × 1333. No celular, uma faixa fotográfica própria mantém trabalhadores visíveis acima do texto e dos botões.
-- Sobre: preservada a mesma fotografia de profissional com capacete analisando uma planta em uma obra.
-- Serviços: execução de estruturas, renovação com pintura, alvenaria residencial em andamento, assentamento de blocos, aplicação de pintura com luvas e roupa de proteção e canteiro com guindastes.
-- Portfólio: obras em andamento, etapas construtivas, acabamentos e resultados finais. As seis rotas e galerias foram mantidas. Fotografias independentes não são apresentadas como evolução do mesmo imóvel.
-- Processo e apresentação institucional: plantas, ferramentas e profissionais com EPIs em um canteiro.
+## Arquivos e qualidade
 
-O recorte utiliza CSS sem deformar as proporções. As fotografias principais agora partem dos **JPEGs originais, copiados sem recompressão**, e recebem uma única otimização pelo Next/Image com qualidade 90. Os WebP anteriores ficam como fallback. A escolha de resolução considera a largura, a altura do recorte, a proporção original e a densidade de pixels da tela. Novos caminhos de imagem evitam reutilizar as versões antigas do cache.
+Os arquivos ativos ficam em `public/images/ai/`. Cada cena possui um JPEG em qualidade 96 e um fallback WebP em qualidade 92, codificados diretamente a partir do PNG gerado, sem ampliação artificial. Os caminhos novos evitam o cache das fotografias anteriores. Dimensões reais, proporção, descrição acessível e ponto focal estão no manifesto `src/data/images.ts`.
 
-A foto de 400 × 400 foi retirada da galeria. A referência de acompanhamento de execução comercial foi substituída por um original de 2000 × 1054, e a de movimentação de materiais por um original de 1609 × 1206. Os originais de alvenaria agora preservam os 3024 × 4032 pixels disponíveis, sem a redução anterior. A seção Sobre mantém a fotografia e o layout dividido, com um quadro menos vertical para evitar esticar o recorte. A galeria usa `scale-down` para não ampliar arquivos pequenos além do tamanho disponível.
+Next/Image entrega versões responsivas com qualidade 90. O componente considera também a altura do quadro e a densidade da tela ao escolher a resolução. O recorte mantém as proporções; a galeria usa `scale-down` para evitar ampliar a imagem além do tamanho disponível. Os PNGs de geração ficam fora do checkout em `/workspace/generated_images`; a aplicação usa os arquivos codificados que estão no repositório.
 
-As fontes menores ainda têm 750 ou 800 pixels; nenhum processamento foi apresentado como recuperação de detalhes inexistentes. Para obter nitidez de alta densidade em ampliações grandes dessas referências, será necessário substituí-las por originais maiores e autorizados. Não houve ampliação artificial.
+## Procedência
 
-## Origem e direitos
-
-Fontes: `Orion56/Construction-Company-Site-Template`, `litonsarker369/buildream-Constructor`, `Arplight/Builderz_Construction`, `Alex-Programming/PAINTER-Website-Template`, `iani-garfalski/Olympia-Brickwork`, além das fontes já utilizadas nas imagens preservadas de Sobre e resultados finais. Nenhum código, layout, marca ou depoimento dessas fontes foi incorporado. As URLs completas e commits constam no manifesto.
-
-**A disponibilidade pública de um arquivo não comprova licença comercial.** A autoria e os direitos fotográficos individuais continuam pendentes; obtenha autorização ou substitua por fotos próprias autorizadas/licenciadas antes da divulgação comercial. Essas imagens não representam a equipe ou obras da Silvestre. A licença MIT de código de Constra foi preservada por transparência, sem tratá-la como comprovação dos direitos fotográficos.
-
-A imagem de luxo gerada por IA e os arquivos sem uso da versão anterior foram removidos da biblioteca do projeto. As capturas enviadas pelo usuário continuam sendo apenas referências. O comparador permanece como estudo SVG original, claramente conceitual.
+Origem: geração por IA com OpenAI para este site. As imagens são sintéticas e não têm um repositório fotográfico de terceiros como fonte. Os arquivos fotográficos antigos permanecem fora da biblioteca ativa; suas referências de licença não se aplicam às novas imagens. Não há alegação de fotografia documental ou de obras reais da empresa.
 
 ## Marca e fontes
 
-A logo original ainda não foi fornecida. A interface utiliza o nome da empresa em texto, sem símbolo inventado. Configure `company.logo` com o arquivo autorizado, preservando suas proporções. Inter e Space Grotesk permanecem locais em WOFF2, com licenças SIL Open Font License em `public/fonts/OFL-*.txt`.
+A logo original ainda não foi fornecida. A interface utiliza o nome da empresa em texto. Configure `company.logo` com o arquivo autorizado, preservando suas proporções. Inter e Space Grotesk permanecem locais em WOFF2, com licenças SIL Open Font License em `public/fonts/OFL-*.txt`.

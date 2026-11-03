@@ -28,7 +28,7 @@ export default function Home() {
           <Photo
             className="hero-image"
             id="hero"
-            alt="Fotografia ilustrativa de profissionais com capacetes e coletes em uma estrutura de concreto em construção."
+            alt="Imagem gerada por IA de profissionais com capacetes e coletes analisando uma planta em uma obra."
             priority
           />
           <div className="hero-shade" />
@@ -74,7 +74,7 @@ export default function Home() {
             </a>
             <span>01 — FUNDAÇÃO. ESTRUTURA. ACABAMENTO.</span>
             <span className="hero-photo-note">
-              Obra em execução · Imagem ilustrativa
+              Construção civil · Imagem gerada por IA
             </span>
           </div>
           <div className="hero-side">TRANQUILIDADE · QUALIDADE · SEGURANÇA</div>
@@ -203,7 +203,7 @@ export default function Home() {
                 cada etapa faz a diferença.
               </p>
               <span className="demo-note">
-                Imagens ilustrativas · não são obras da Silvestre
+                Imagens geradas por IA · não são obras da Silvestre
               </span>
             </div>
           </div>

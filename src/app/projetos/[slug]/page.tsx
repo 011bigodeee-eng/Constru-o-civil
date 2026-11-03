@@ -56,8 +56,8 @@ export default async function ProjectPage({
               <Eyebrow number="SC">Execução em foco</Eyebrow>
               <p>{p.description}</p>
               <span className="demo-note">
-                Nomes e características demonstrativos. As imagens são
-                referências visuais e não documentam um único projeto real.
+                Nomes e características demonstrativos. As imagens são geradas
+                por IA e não documentam um projeto real.
               </span>
             </div>
             <div className="project-features">

@@ -110,7 +110,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Silvestre Construção Civil</span>
-        <span>Prévia comercial · Conteúdo ilustrativo</span>
+        <span>Imagens ilustrativas geradas por IA</span>
         <Link href="/privacidade">
           Privacidade <ArrowRight size={12} />
         </Link>

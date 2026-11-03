@@ -25,7 +25,7 @@ export const projects: Project[] = [
     image: "work-residential",
     gallery: ["work-residential", "work-structure"],
     description:
-      "Referências de uma construção residencial em execução: estrutura, organização do canteiro e etapas que antecedem o acabamento. Fotografias independentes, sem vínculo com obras da Silvestre.",
+      "Referências de uma construção residencial em execução: estrutura, organização do canteiro e etapas que antecedem o acabamento. Imagens geradas por IA, sem vínculo com obras da Silvestre.",
     features: [
       "Estrutura residencial",
       "Organização do canteiro",

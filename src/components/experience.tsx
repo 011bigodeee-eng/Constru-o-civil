@@ -63,18 +63,18 @@ export function Intro() {
       <p>
         Construindo confiança.
         <br />
-        Realizando projetos.
+        Executando obras.
       </p>
       <button onClick={() => setVisible(false)}>Pular abertura ↗</button>
     </div>
   );
 }
 const stages = [
-  "Ideia",
   "Planejamento",
+  "Fundação",
   "Estrutura",
   "Construção",
-  "Realização",
+  "Acabamento",
 ];
 export function Architecture() {
   const [stage, setStage] = useState(0);
@@ -107,17 +107,17 @@ export function Architecture() {
   return (
     <section className="architecture" ref={ref}>
       <div className="architecture-copy">
-        <Eyebrow number="04">Arquitetura em movimento</Eyebrow>
+        <Eyebrow number="04">Da fundação ao acabamento</Eyebrow>
         <h2>
-          Toda realização
+          Toda obra
           <br />
-          começa com
+          começa pela
           <br />
-          <em>uma ideia.</em>
+          <em>base.</em>
         </h2>
         <p>
-          Do primeiro traço à forma final. Uma visão ilustrativa do caminho que
-          transforma possibilidades em espaços.
+          Do planejamento à estrutura e ao acabamento. Um estudo ilustrativo das
+          etapas de construção, com cada parte no seu lugar.
         </p>
         <div
           className="stage-list"
@@ -166,7 +166,7 @@ export function Architecture() {
           <span>
             0{stage + 1} / {stages[stage].toUpperCase()}
           </span>
-          <span>IDEIA → REALIZAÇÃO</span>
+          <span>BASE → ACABAMENTO</span>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ import {
   X,
   Expand,
 } from "lucide-react";
-import { projects } from "@/data/projects";
+import { projects, constructionStages } from "@/data/projects";
 import { Photo } from "./shared";
 export function Gallery({
   images,
@@ -34,10 +34,7 @@ export function Gallery({
             }}
             aria-label={`Ampliar imagem ${i + 1} de ${title}`}
           >
-            <Photo
-              id={id}
-              alt={`${title}, referência arquitetônica ${i + 1}`}
-            />
+            <Photo id={id} alt={`${title}, referência de execução ${i + 1}`} />
             <span>
               <Expand size={18} />
             </span>
@@ -86,14 +83,33 @@ export function Gallery({
 }
 export default function Portfolio() {
   const [filter, setFilter] = useState("Todos");
+  const [stage, setStage] = useState("Todas as etapas");
   const [selected, setSelected] = useState(0);
   const dialog = useRef<HTMLDialogElement>(null);
   const touch = useRef(0);
   const visible = projects.filter(
-    (p) => filter === "Todos" || p.category === filter,
+    (p) =>
+      (filter === "Todos" || p.category === filter) &&
+      (stage === "Todas as etapas" || p.stage === stage),
   );
   return (
     <>
+      <div
+        className="stage-toolbar"
+        role="group"
+        aria-label="Filtrar por etapa da obra"
+      >
+        {["Todas as etapas", ...constructionStages].map((label) => (
+          <button
+            key={label}
+            aria-pressed={stage === label}
+            className={stage === label ? "selected" : ""}
+            onClick={() => setStage(label)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
       <div className="portfolio-toolbar">
         <div role="group" aria-label="Filtrar projetos">
           {["Todos", "Residencial", "Comercial", "Reformas"].map((f) => (
@@ -107,9 +123,23 @@ export default function Portfolio() {
             </button>
           ))}
         </div>
-        <span>Referências que inspiram.</span>
+        <span>Construção em cada etapa.</span>
       </div>
       <div className="project-grid">
+        {visible.length === 0 && (
+          <div className="portfolio-empty">
+            <p>Nenhuma referência nesta combinação de etapa e categoria.</p>
+            <button
+              className="button"
+              onClick={() => {
+                setFilter("Todos");
+                setStage("Todas as etapas");
+              }}
+            >
+              Ver todas as referências
+            </button>
+          </div>
+        )}
         {visible.map((p, i) => (
           <article className="project" key={p.slug}>
             <div className="project-image">
@@ -128,7 +158,7 @@ export default function Portfolio() {
                   <Expand size={20} />
                 </span>
               </button>
-              <span className="demo-tag">Projeto ilustrativo</span>
+              <span className="demo-tag">{p.stage} · Ilustrativo</span>
             </div>
             <div className="project-title">
               <div>

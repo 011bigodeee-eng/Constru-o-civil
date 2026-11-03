@@ -1,6 +1,6 @@
 # Silvestre Construção Civil
 
-Prévia comercial em Next.js App Router, React e TypeScript, com direção editorial grafite/laranja, GSAP e arquitetura em CSS 3D. Conteúdo demonstrativo identificado, sem avaliações, obras ou dados empresariais inventados.
+Prévia comercial em Next.js App Router, React e TypeScript, com direção industrial premium grafite/laranja, fotografias de execução de obras, GSAP e estrutura em CSS 3D. Conteúdo demonstrativo identificado, sem avaliações, obras ou dados empresariais inventados.
 
 ## Executar
 
@@ -31,13 +31,13 @@ Porta 3000. Nenhum backend, banco de dados, token ou chave é necessário. Os fo
 
 ## Funcionalidades
 
-Abertura com Pular, execução por sessão e movimento reduzido; navegação fixa com seção ativa; menu mobile com foco e Escape; serviços com WhatsApp contextual; portfólio filtrável; galeria com teclado e swipe; seis páginas individuais; arquitetura CSS 3D em cinco etapas; processo e valores; comparador conceitual acessível; assistente em seis etapas com revisão e validação; formulário rápido; FAQ; localização; privacidade; SEO, Open Graph, sitemap, robots e JSON-LD.
+Abertura com Pular, execução por sessão e movimento reduzido; navegação fixa com seção ativa; menu mobile com foco e Escape; serviços com WhatsApp contextual; portfólio filtrável por etapas construtivas e categorias; galeria com teclado e swipe; seis páginas individuais; arquitetura CSS 3D em cinco etapas; processo e valores; comparador conceitual acessível; assistente em seis etapas com revisão e validação; formulário rápido; FAQ; localização; privacidade; SEO, Open Graph, sitemap, robots e JSON-LD.
 
 CSS próprio mantém o design system, sem dependência de utilitários CSS. CSS 3D substitui WebGL para reduzir custo no celular. O mapa é um link para a cidade, sem sede inventada. Não há áudio, analytics, depoimentos simulados ou cálculo de preços. O modo demonstração bloqueia a indexação por padrão.
 
 ## Conteúdo e imagens
 
-Edite `src/config/company.ts` e os arquivos em `src/data/`. Ative a logo original pelo campo `logo`. Consulte [docs/IMAGES.md](docs/IMAGES.md) antes de divulgação comercial. Algumas fotografias secundárias têm resolução limitada e licença individual pendente. A Hero usa uma visualização arquitetônica gerada por IA e identificada. As galerias são referências; não documentam obras reais da empresa nem um único imóvel real. O comparador é um estudo SVG do mesmo ambiente em duas fases.
+Edite `src/config/company.ts` e os arquivos em `src/data/`. Ative a logo original pelo campo `logo`. Consulte [docs/IMAGES.md](docs/IMAGES.md) antes de divulgação comercial. Algumas fotografias secundárias têm resolução limitada e licença individual pendente. A Hero usa fotografia real de profissionais com EPIs em uma obra. Não há imagens geradas por IA na biblioteca ativa. As galerias são referências; não documentam obras reais da empresa nem um único imóvel real. O comparador é um estudo SVG do mesmo ambiente em duas fases.
 
 O conteúdo de credibilidade é institucional, sem avaliações inventadas. Depoimentos reais podem ser integrados posteriormente, com autorização. Não desligue `demoMode` antes de confirmar serviços, processo e projetos com a empresa.
 
@@ -60,3 +60,7 @@ O runner inicia produção e usa Chromium em `/usr/bin/chromium`. Em outra máqu
 5. Após aprovação do conteúdo real, altere `demoMode` para `false` e faça novo deploy para permitir indexação.
 
 Nenhum deploy foi executado automaticamente. Não foi informado domínio definitivo. Metas Lighthouse não são presumidas; consulte a validação registrada em `docs/VALIDATION.md`.
+
+## Revisão da identidade visual
+
+Conceito: **Da fundação ao acabamento. Construção de verdade.** A direção fotográfica mostra execução, estruturas, alvenaria e pintura; a seção Sobre foi preservada. O portfólio mantém as seis rotas e acrescenta filtros por obras em andamento, etapas construtivas, acabamentos e resultados finais. Não se simula evolução de obras com fotografias sem correspondência comprovada.

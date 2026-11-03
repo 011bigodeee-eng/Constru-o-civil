@@ -28,12 +28,12 @@ export default function Home() {
           <Photo
             className="hero-image"
             id="hero"
-            alt="Visualização arquitetônica gerada por IA de uma residência contemporânea de concreto e vidro."
+            alt="Fotografia ilustrativa de profissionais com capacetes e coletes em uma estrutura de concreto em construção."
             priority
           />
           <div className="hero-shade" />
           <div className="hero-topline">
-            <span>ESTRUTURA PARA REALIZAR.</span>
+            <span>DA FUNDAÇÃO AO ACABAMENTO.</span>
             <span>
               PIRACICABA / SP <i />
             </span>
@@ -41,7 +41,7 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">
               <i />
-              SILVESTRE CONSTRUÇÃO CIVIL
+              CONSTRUÇÃO DE VERDADE.
             </p>
             <h1>
               Construímos
@@ -57,7 +57,7 @@ export default function Home() {
             <p className="hero-description">
               Qualidade, segurança e compromisso
               <br />
-              em cada etapa do seu projeto.
+              na construção e na reforma da sua obra.
             </p>
             <div className="hero-actions">
               <Link href="#orcamento" className="button">
@@ -70,15 +70,17 @@ export default function Home() {
           </div>
           <div className="hero-bottom">
             <a href="#sobre">
-              <ArrowDown size={18} /> EXPLORE NOVAS POSSIBILIDADES
+              <ArrowDown size={18} /> CONHEÇA NOSSO TRABALHO
             </a>
-            <span>01 — IDEIA. PLANEJAMENTO. REALIZAÇÃO.</span>
-            <span className="hero-photo-note">Conceito arquitetônico · IA</span>
+            <span>01 — FUNDAÇÃO. ESTRUTURA. ACABAMENTO.</span>
+            <span className="hero-photo-note">
+              Obra em execução · Imagem ilustrativa
+            </span>
           </div>
           <div className="hero-side">TRANQUILIDADE · QUALIDADE · SEGURANÇA</div>
         </section>
         <div className="values-strip">
-          <span>O seu próximo capítulo começa aqui.</span>
+          <span>Da fundação ao acabamento. Construção de verdade.</span>
           <p>
             Tranquilidade <i /> Qualidade <i /> Segurança{" "}
             <ArrowUpRight size={20} />
@@ -96,9 +98,9 @@ export default function Home() {
             <div className="about-seal">
               <Compass size={26} />
               <span>
-                IDEIAS SÓLIDAS.
+                BASES SÓLIDAS.
                 <br />
-                NOVAS POSSIBILIDADES.
+                CUIDADO NA EXECUÇÃO.
               </span>
             </div>
           </div>
@@ -141,16 +143,16 @@ export default function Home() {
             <div>
               <Eyebrow number="02">O que podemos construir</Eyebrow>
               <h2>
-                Possibilidades para
+                Execução em
                 <br />
-                <em>o seu próximo passo.</em>
+                <em>cada etapa da obra.</em>
               </h2>
             </div>
             <div>
               <p>
-                Da estrutura aos detalhes.
+                Construção, reformas e acabamentos.
                 <br />
-                Conheça caminhos para tirar
+                Conheça as etapas para tirar
                 <br />
                 sua ideia do papel.
               </p>
@@ -185,19 +187,20 @@ export default function Home() {
         <section id="projetos" className="portfolio section-pad">
           <div className="section-heading reveal">
             <div>
-              <Eyebrow number="03">Referências & possibilidades</Eyebrow>
+              <Eyebrow number="03">Obras & etapas construtivas</Eyebrow>
               <h2>
-                Projetos que
+                Da estrutura
                 <br />
-                <em>traduzem qualidade.</em>
+                <em>ao resultado final.</em>
               </h2>
             </div>
             <div>
               <p>
-                Uma seleção para inspirar.
-                <br />O próximo espaço pode
+                Referências de execução.
                 <br />
-                começar com a sua ideia.
+                Canteiro, estrutura e acabamento:
+                <br />
+                cada etapa faz a diferença.
               </p>
               <span className="demo-note">
                 Imagens ilustrativas · não são obras da Silvestre
@@ -207,15 +210,15 @@ export default function Home() {
           <Portfolio />
           <div className="portfolio-cta">
             <p>
-              Como você imagina
+              O que você precisa
               <br />
-              <strong>o seu próximo projeto?</strong>
+              <strong>construir ou reformar?</strong>
             </p>
             <ContactLink
               className="outline-button"
-              message="Olá, Silvestre! Vi as referências no site e gostaria de conversar sobre um projeto semelhante."
+              message="Olá, Silvestre! Vi as referências de execução no site e gostaria de conversar sobre minha obra."
             >
-              Quero um projeto como este
+              Quero conversar sobre minha obra
             </ContactLink>
           </div>
         </section>
@@ -240,11 +243,9 @@ export default function Home() {
           <div className="process-image reveal">
             <Photo
               id="process"
-              alt="Planejamento e referências técnicas de arquitetura, imagem ilustrativa"
+              alt="Plantas e ferramentas para planejar a execução da obra, imagem ilustrativa"
             />
-            <span className="image-note">
-              Planejar é construir com intenção.
-            </span>
+            <span className="image-note">Planejamento antes da execução.</span>
           </div>
           <div className="timeline">
             {[
@@ -334,8 +335,8 @@ export default function Home() {
               <em>em cada detalhe.</em>
             </h2>
             <p>
-              Ouvir, alinhar expectativas e conversar com clareza. É assim que
-              uma ideia encontra espaço para crescer.
+              Alinhar o escopo, organizar as etapas e conversar com clareza. O
+              cuidado na execução começa antes do primeiro serviço.
             </p>
             <p>
               Conheça Silvestre Ferreira e converse sobre o que faz sentido para
@@ -374,15 +375,15 @@ export default function Home() {
           <div className="quote-copy reveal">
             <Eyebrow number="09">O próximo passo é seu</Eyebrow>
             <h2>
-              Grandes ideias
+              Sua construção
               <br />
-              começam com
+              começa com
               <br />
               <em>uma conversa.</em>
             </h2>
             <p>
-              Conte o que você tem em mente. Vamos organizar as informações para
-              você conversar com a Silvestre.
+              Conte o que precisa construir ou reformar. Vamos organizar as
+              informações para você conversar com a Silvestre.
             </p>
             <div className="quote-features">
               <span>

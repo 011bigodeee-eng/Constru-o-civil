@@ -149,7 +149,7 @@ test("formulário rápido, FAQ, comparador e narrativa 3D", async ({ page }) => 
   await expect(range).toHaveValue("51");
   await page
     .locator(".stage-list")
-    .getByRole("button", { name: "05 Realização" })
+    .getByRole("button", { name: "05 Acabamento" })
     .click();
   await expect(page.locator(".building")).toHaveClass(/stage-4/);
 });
@@ -265,4 +265,34 @@ test("acessibilidade automatizada: sem violações sérias ou críticas", async 
         })),
     ).toEqual([]);
   }
+});
+
+test("identidade de construção e filtros por etapas sem remover categorias", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await open(page);
+  await expect(page.locator(".hero-copy .eyebrow")).toHaveText(
+    "CONSTRUÇÃO DE VERDADE.",
+  );
+  await expect(page.locator(".hero-image img")).toHaveAttribute(
+    "src",
+    /work-hero/,
+  );
+  const stages = page.getByRole("group", { name: "Filtrar por etapa da obra" });
+  await stages
+    .getByRole("button", { name: "Obras em andamento", exact: true })
+    .click();
+  await expect(page.locator(".project")).toHaveCount(2);
+  await stages
+    .getByRole("button", { name: "Acabamentos", exact: true })
+    .click();
+  await expect(page.locator(".project")).toHaveCount(2);
+  await page
+    .getByRole("group", { name: "Filtrar projetos", exact: true })
+    .getByRole("button", { name: "Comercial", exact: true })
+    .click();
+  await expect(page.locator(".portfolio-empty")).toBeVisible();
+  await page.getByRole("button", { name: "Ver todas as referências" }).click();
+  await expect(page.locator(".project")).toHaveCount(6);
 });

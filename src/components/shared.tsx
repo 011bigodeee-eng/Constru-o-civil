@@ -58,8 +58,7 @@ export function Footer() {
         </Link>
         <p>
           Construir é dar forma
-          <br />
-          ao que vem pela frente.
+          <br />à sua obra.
         </p>
         <a href="/#inicio" aria-label="Voltar ao início" className="round-link">
           ↑
@@ -86,7 +85,7 @@ export function Footer() {
           ))}
         </div>
         <div>
-          <small>POSSIBILIDADES</small>
+          <small>SERVIÇOS</small>
           <p>
             Construção · Reformas
             <br />
@@ -99,7 +98,7 @@ export function Footer() {
           </span>
         </div>
         <div>
-          <small>UMA NOVA PERSPECTIVA</small>
+          <small>BASES DO NOSSO TRABALHO</small>
           <p>
             Tranquilidade.
             <br />

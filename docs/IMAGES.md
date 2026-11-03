@@ -1,13 +1,25 @@
-# Imagens e identidade
+# Direção fotográfica — construção de verdade
 
-A logo original não estava nos anexos. A interface utiliza o nome em texto, sem símbolo inventado. Para inserir a logo, coloque o arquivo em `public/` e configure `company.logo` em `src/config/company.ts`. Ajuste as dimensões do componente às proporções originais.
+A revisão substitui a direção de arquitetura de luxo por execução de obras. O manifesto `src/data/images.ts` contém 18 fotografias de referência, com origem fixada no commit, dimensões originais e otimizadas, seção, texto alternativo e ponto focal desktop/mobile. Não há imagens geradas por IA na biblioteca ativa.
 
-A imagem principal foi gerada com OpenAI Image Generation para este projeto. É uma visualização arquitetônica conceitual, identificada como IA, e não documenta obra da Silvestre. O original permanece em `/workspace/generated_images/`; os arquivos utilizados estão em `public/images/`.
+## Seleção e enquadramento
 
-As outras imagens são referências obtidas nos repositórios públicos indicados no manifesto `src/data/images.ts`, com URLs fixadas no commit de origem. Nenhum layout, código ou marca desses projetos foi copiado. O manifesto registra dimensões, proporção, seção, pontos focais, alt e natureza ilustrativa.
+- Hero: profissionais com capacetes e coletes diante de estrutura de concreto em execução; imagem original 2000 × 1333. No celular, uma faixa fotográfica própria mantém trabalhadores visíveis acima do texto e dos botões.
+- Sobre: preservada a mesma fotografia de profissional com capacete analisando uma planta em uma obra.
+- Serviços: execução de estruturas, renovação com pintura, alvenaria residencial em andamento, assentamento de blocos, aplicação de pintura com luvas e roupa de proteção e canteiro com guindastes.
+- Portfólio: obras em andamento, etapas construtivas, acabamentos e resultados finais. As seis rotas e galerias foram mantidas. Fotografias independentes não são apresentadas como evolução do mesmo imóvel.
+- Processo e apresentação institucional: plantas, ferramentas e profissionais com EPIs em um canteiro.
 
-A licença MIT do código de Constra está preservada em `LICENSE-Themefisher.txt`. Essa licença não comprova os direitos de cada fotografia. **Autoria e direitos fotográficos precisam ser confirmados; substitua imagens com licença incerta por fotos próprias autorizadas ou imagens licenciadas antes de divulgação comercial.** As dimensões originais variam de 540 a 1600 pixels; algumas referências secundárias precisam de originais maiores na versão definitiva. Não foi feita ampliação artificial.
+O recorte utiliza CSS sem deformar as proporções. WebP é o formato principal; JPEG serve como fallback e imagem social. Não houve ampliação artificial. A referência de fundações usada apenas na galeria tem original de 400 × 400; antes de divulgação comercial, convém obter uma fotografia correspondente em maior resolução. As demais referências ativas variam de 750 pixels até originais de 3024 × 4032, com redução de arquivos grandes para carregamento.
 
-As quatro capturas do usuário foram consultadas como referências e não foram incorporadas como imagens finais. Não havia logo nem par confiável de antes/depois. O comparador apresenta um desenho SVG original do mesmo ambiente em duas fases, claramente conceitual.
+## Origem e direitos
 
-Inter e Space Grotesk são locais, com licenças SIL Open Font License em `public/fonts/OFL-*.txt`.
+Fontes: `litonsarker369/buildream-Constructor`, `Arplight/Builderz_Construction`, `Alex-Programming/PAINTER-Website-Template`, `iani-garfalski/Olympia-Brickwork`, além das fontes já utilizadas nas imagens preservadas de Sobre e resultados finais. Nenhum código, layout, marca ou depoimento dessas fontes foi incorporado. As URLs completas e commits constam no manifesto.
+
+**A disponibilidade pública de um arquivo não comprova licença comercial.** A autoria e os direitos fotográficos individuais continuam pendentes; obtenha autorização ou substitua por fotos próprias autorizadas/licenciadas antes da divulgação comercial. Essas imagens não representam a equipe ou obras da Silvestre. A licença MIT de código de Constra foi preservada por transparência, sem tratá-la como comprovação dos direitos fotográficos.
+
+A imagem de luxo gerada por IA e os arquivos sem uso da versão anterior foram removidos da biblioteca do projeto. As capturas enviadas pelo usuário continuam sendo apenas referências. O comparador permanece como estudo SVG original, claramente conceitual.
+
+## Marca e fontes
+
+A logo original ainda não foi fornecida. A interface utiliza o nome da empresa em texto, sem símbolo inventado. Configure `company.logo` com o arquivo autorizado, preservando suas proporções. Inter e Space Grotesk permanecem locais em WOFF2, com licenças SIL Open Font License em `public/fonts/OFL-*.txt`.

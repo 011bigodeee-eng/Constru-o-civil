@@ -39,12 +39,12 @@ export default async function ProjectPage({
         <section className="project-hero">
           <Photo
             id={p.image}
-            alt={`${p.name}: referência arquitetônica ilustrativa`}
+            alt={`${p.name}: referência ilustrativa de construção civil`}
             priority
           />
           <div className="project-hero-copy">
             <Eyebrow number={`0${index + 1}`}>
-              {p.category} / Referência arquitetônica
+              {p.category} / {p.stage}
             </Eyebrow>
             <h1>{p.name}</h1>
             <p>Projeto ilustrativo · Não é uma obra executada pela Silvestre</p>
@@ -53,7 +53,7 @@ export default async function ProjectPage({
         <section className="section-pad">
           <div className="project-intro">
             <div>
-              <Eyebrow number="SC">Uma possibilidade para inspirar</Eyebrow>
+              <Eyebrow number="SC">Execução em foco</Eyebrow>
               <p>{p.description}</p>
               <span className="demo-note">
                 Nomes e características demonstrativos. As imagens são
@@ -67,9 +67,9 @@ export default async function ProjectPage({
             </div>
           </div>
           <h2>
-            Outros olhares.
+            Etapas e detalhes.
             <br />
-            <em>Novas possibilidades.</em>
+            <em>Construção de verdade.</em>
           </h2>
           <Gallery images={p.gallery} title={p.name} />
           <div className="project-nav">
@@ -79,7 +79,7 @@ export default async function ProjectPage({
             <ContactLink
               message={`Olá, Silvestre! Gostei da referência ilustrativa ${p.name} e gostaria de conversar sobre meu projeto.`}
             >
-              Quero um projeto como este
+              Quero conversar sobre minha obra
             </ContactLink>
             <Link href={`/projetos/${next.slug}`}>
               Próximo projeto <ArrowRight size={16} />

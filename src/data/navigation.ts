@@ -2,7 +2,7 @@ export const navigation = [
   ["Início", "inicio"],
   ["Sobre", "sobre"],
   ["Serviços", "servicos"],
-  ["Projetos", "projetos"],
+  ["Obras", "projetos"],
   ["Diferenciais", "diferenciais"],
   ["Contato", "contato"],
 ] as const;

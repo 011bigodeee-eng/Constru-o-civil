@@ -3008,3 +3008,163 @@ body:has(.project-page) .site-header {
     pointer-events: none;
   }
 }
+/* Construção civil: concreto neutro, marcações técnicas e camadas de execução. */
+.services,
+.process {
+  background-color: #e8e9e9;
+}
+.credibility,
+.quote-section {
+  background-color: #e3e5e5;
+}
+.contact {
+  background-color: #202427;
+}
+.services {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 79px,
+    #11131504 80px
+  );
+}
+.hero-topline,
+.service-number,
+.technical-label,
+.building-caption {
+  font-family: var(--font-space), monospace;
+}
+.service-number {
+  border-left: 2px solid var(--orange);
+  padding-left: 9px;
+}
+.hero-copy .eyebrow {
+  letter-spacing: 0.18em;
+}
+.hero-side {
+  padding-top: 20px;
+  border-top: 1px solid #ff872b80;
+}
+.stage-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 22px 0;
+  border-top: 1px solid #ffffff25;
+  border-bottom: 1px solid #ffffff25;
+}
+.stage-toolbar button {
+  background: transparent;
+  color: #c8cecf;
+  min-height: 44px;
+  padding: 11px 17px;
+  border: 1px solid #ffffff30;
+  font-size: 11px;
+  text-align: left;
+}
+.stage-toolbar button.selected {
+  background: var(--orange);
+  color: var(--ink);
+  border-color: var(--orange);
+}
+.stage-toolbar button:hover {
+  border-color: var(--orange);
+}
+.portfolio-empty {
+  grid-column: 1/-1;
+  padding: 35px 0;
+}
+.portfolio-empty p {
+  color: #b6bdbd;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+@media (max-width: 650px) {
+  .stage-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 17px 0;
+  }
+  .stage-toolbar button {
+    font-size: 10px;
+    padding: 10px;
+    line-height: 1.5;
+  }
+  .stage-toolbar button:first-child {
+    grid-column: 1/-1;
+  }
+  .hero-copy .eyebrow {
+    letter-spacing: 0.1em;
+    font-size: 9px;
+  }
+  .hero-photo-note {
+    max-width: 120px;
+    text-align: right;
+  }
+}
+.hero-topline > span {
+  padding: 5px 8px;
+  background: #11131599;
+}
+@media (max-width: 650px) {
+  .hero {
+    min-height: 900px;
+  }
+  .hero-image {
+    inset: 76px 0 auto;
+    height: 365px;
+  }
+  .hero-image img {
+    object-position: var(--focus-mobile, 65% 35%);
+  }
+  .hero-shade {
+    background:
+      linear-gradient(0deg, #111315 0%, #111315 54%, #11131515 84%),
+      linear-gradient(180deg, #11131590, transparent 30%);
+  }
+  .hero-copy {
+    padding-top: 362px;
+  }
+  .hero-topline {
+    top: 96px;
+  }
+  .hero-bottom {
+    bottom: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .hero-copy {
+    padding-top: 355px;
+  }
+  .hero {
+    min-height: 895px;
+  }
+}
+.hero-photo-note {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.demo-tag {
+  font-size: 10px;
+}
+.image-note {
+  font-size: 10px;
+}
+@media (max-width: 650px) {
+  .hero-photo-note {
+    font-size: 9px;
+  }
+  .demo-note {
+    font-size: 10px;
+  }
+}
+.process-heading > p:not(.eyebrow),
+.credibility > div > p:not(.eyebrow),
+.credibility .demo-note {
+  color: #4f595b;
+}
+.site-header:not(.solid) {
+  background: linear-gradient(#111315c0, #11131555);
+}

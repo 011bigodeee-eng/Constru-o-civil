@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     template: "%s | Silvestre Construção Civil",
   },
   description:
-    "Qualidade, segurança e compromisso em cada etapa do seu projeto. Converse com Silvestre Construção Civil em Piracicaba, São Paulo.",
+    "Da fundação ao acabamento: construção, reformas e execução com qualidade e segurança. Converse com Silvestre Construção Civil em Piracicaba, São Paulo.",
   openGraph: {
     title: "Silvestre Construção Civil",
     description: "Construímos mais que obras. Construímos confiança.",
     locale: "pt_BR",
     type: "website",
-    images: ["/images/hero.jpg"],
+    images: ["/images/work-hero.jpg"],
   },
   robots: company.demoMode
     ? { index: false, follow: false }

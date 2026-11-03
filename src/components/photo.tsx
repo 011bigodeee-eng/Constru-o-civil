@@ -26,7 +26,7 @@ export default function Photo({
       }
     >
       <Image
-        src={fallback ? `/images/${id}.jpg` : asset.path}
+        src={fallback ? asset.path.replace(/\.webp$/, ".jpg") : asset.path}
         alt={alt}
         fill
         sizes={

@@ -7,7 +7,7 @@ Executada em 3 de novembro de 2026, no ambiente de desenvolvimento em nuvem, com
 - `npm ci --no-audit --no-fund`: instalação reproduzível concluída pelo lockfile.
 - `npm run build`: produção compilada, com seis páginas de projetos pré-renderizadas, página inicial, privacidade, 404, sitemap e robots.
 - `npm run typecheck`: tipos verificados.
-- `npm run test:e2e`: **9 testes passaram**, em 51,9 segundos, sem testes ignorados.
+- `npm run test:e2e`: **10 testes passaram**, em aproximadamente 1,2 minuto, sem testes ignorados.
 - axe: nenhuma violação séria ou crítica nas verificações automatizadas da página inicial, privacidade e Casa Horizonte. Isso não equivale a auditoria manual completa ou certificação de conformidade.
 - Nenhum erro de JavaScript registrado no cenário de imagens e responsividade.
 
@@ -22,6 +22,7 @@ Executada em 3 de novembro de 2026, no ambiente de desenvolvimento em nuvem, com
 7. Imagens visíveis carregadas, destinos das âncoras, erros JavaScript e responsividade.
 8. Verificação axe nas três páginas representativas.
 9. Identidade de construção na Hero, fotografia real, filtros por etapas e categorias e recuperação de combinações sem resultados.
+10. Tela mobile com densidade 2×: qualidade 90, seleção dos arquivos originais, resolução suficiente para a largura física e galeria sem ampliação artificial.
 
 ## Responsividade e revisão visual
 
@@ -46,3 +47,7 @@ Os campos `install_script` e `start_skill` foram salvos no rascunho da configura
 ## Revisão de identidade visual
 
 Conceito aplicado: **Da fundação ao acabamento. Construção de verdade.** Abertura, WhatsApp, dois formulários, assistente de orçamento, filtros anteriores, seis rotas individuais, galerias, FAQ, comparador, SEO e suporte a movimento reduzido foram preservados. A fotografia da seção Sobre foi mantida. Nenhuma evolução de obra é sugerida quando não há correspondência comprovada entre as fotografias.
+
+## Correção da nitidez das fotografias
+
+Eliminada a recompressão WebP intermediária; JPEGs originais alimentam diretamente o Next/Image em qualidade 90. A escolha de resolução acompanha o tamanho real do recorte e a densidade da tela. A foto de 400 × 400 foi retirada; duas referências ganharam originais maiores. Sobre mantém a imagem com recorte menos vertical. A galeria evita esticar arquivos além de suas dimensões. Os originais menores continuam limitados pela própria fonte, sem simulação de detalhe inexistente.

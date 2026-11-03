@@ -53,7 +53,7 @@ export const projects: Project[] = [
     category: "Comercial",
     stage: "Obras em andamento",
     image: "work-commercial",
-    gallery: ["work-commercial", "work-foundations"],
+    gallery: ["work-commercial", "work-structure"],
     description:
       "Estruturas de concreto e movimentação de materiais mostram a dimensão prática da construção comercial. Referências demonstrativas de canteiros distintos.",
     features: [

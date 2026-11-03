@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { imageById } from "@/data/images";
 export default function Photo({
   id,
@@ -15,8 +15,32 @@ export default function Photo({
 }) {
   const [fallback, setFallback] = useState(false);
   const asset = imageById[id];
+  const container = useRef<HTMLDivElement>(null);
+  const [displayWidth, setDisplayWidth] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    const element = container.current;
+    if (!element) return;
+    const measure = () => {
+      const { width, height } = element.getBoundingClientRect();
+      if (!width || !height) return;
+      // A landscape source covering a tall card needs more pixels than the card width.
+      const coverWidth = Math.max(width, height * asset.ratio);
+      const dpr = window.devicePixelRatio || 1;
+      setDisplayWidth(Math.ceil(Math.min(coverWidth, asset.width / dpr)));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    window.addEventListener("resize", measure, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [asset.width, asset.ratio]);
   return (
     <div
+      ref={container}
+      data-image-id={id}
       className={`photo ${className}`}
       style={
         {
@@ -26,16 +50,12 @@ export default function Photo({
       }
     >
       <Image
-        src={fallback ? asset.path.replace(/\.webp$/, ".jpg") : asset.path}
+        src={fallback ? asset.fallbackPath : asset.path}
         alt={alt}
         fill
-        sizes={
-          priority
-            ? "(max-width: 900px) 1800px, 100vw"
-            : "(max-width: 650px) 100vw, 50vw"
-        }
+        sizes={`${displayWidth ?? asset.width}px`}
         priority={priority}
-        quality={85}
+        quality={90}
         onError={() => setFallback(true)}
       />
     </div>

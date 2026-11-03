@@ -296,3 +296,61 @@ test("identidade de construção e filtros por etapas sem remover categorias", a
   await page.getByRole("button", { name: "Ver todas as referências" }).click();
   await expect(page.locator(".project")).toHaveCount(6);
 });
+
+test("fotografias nítidas em celular com tela de alta densidade", async ({
+  browser,
+}) => {
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 },
+    deviceScaleFactor: 2,
+    reducedMotion: "reduce",
+  });
+  const page = await context.newPage();
+  try {
+    await page.goto("http://127.0.0.1:3000/");
+    for (const selector of [
+      ".hero-image",
+      ".about-visual > .photo",
+      ".service-0 .photo",
+      ".service-4 .photo",
+    ]) {
+      const photo = page.locator(selector);
+      await photo.scrollIntoViewIfNeeded();
+      await expect
+        .poll(() =>
+          photo
+            .locator("img")
+            .evaluate(
+              (img: HTMLImageElement) => img.complete && img.naturalWidth > 0,
+            ),
+        )
+        .toBe(true);
+      const quality = await photo
+        .locator("img")
+        .evaluate((img: HTMLImageElement) => {
+          const url = new URL(img.currentSrc);
+          const rect = img.getBoundingClientRect();
+          return {
+            requested: Number(url.searchParams.get("w")),
+            quality: Number(url.searchParams.get("q")),
+            source: url.searchParams.get("url"),
+            height: rect.height,
+            width: rect.width,
+          };
+        });
+      expect(quality.quality).toBe(90);
+      expect(quality.source).toContain("-original.jpg");
+      expect(quality.requested).toBeGreaterThanOrEqual(
+        Math.ceil(quality.width * 2),
+      );
+    }
+    await page.locator(".project-image button").first().click();
+    await expect(page.locator(".lightbox")).toBeVisible();
+    await expect(page.locator(".lightbox > .photo img")).toHaveCSS(
+      "object-fit",
+      "scale-down",
+    );
+  } finally {
+    await context.close();
+  }
+});

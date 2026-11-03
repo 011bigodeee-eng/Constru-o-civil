@@ -3168,3 +3168,11 @@ body:has(.project-page) .site-header {
 .site-header:not(.solid) {
   background: linear-gradient(#111315c0, #11131555);
 }
+/* Preserve source detail instead of stretching a short landscape photo into a tall portrait. */
+.about-visual > .photo {
+  height: auto;
+  aspect-ratio: 5/4;
+}
+.lightbox > .photo img {
+  object-fit: scale-down;
+}

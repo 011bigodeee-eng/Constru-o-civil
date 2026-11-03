@@ -64,3 +64,7 @@ Nenhum deploy foi executado automaticamente. Não foi informado domínio definit
 ## Revisão da identidade visual
 
 Conceito: **Da fundação ao acabamento. Construção de verdade.** A direção fotográfica mostra execução, estruturas, alvenaria e pintura; a seção Sobre foi preservada. O portfólio mantém as seis rotas e acrescenta filtros por obras em andamento, etapas construtivas, acabamentos e resultados finais. Não se simula evolução de obras com fotografias sem correspondência comprovada.
+
+## Qualidade das fotografias
+
+As imagens usam JPEGs originais, sem a recompressão WebP intermediária, e otimização Next/Image com qualidade 90. A resolução considera também o recorte vertical e a densidade da tela. Duas referências foram substituídas por originais maiores, a imagem de 400 × 400 foi retirada e a galeria evita ampliação de arquivos pequenos. Consulte `docs/IMAGES.md` para dimensões, procedência e limites dos originais menores.
